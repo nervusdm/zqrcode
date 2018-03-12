@@ -27,7 +27,9 @@ body
   background: none transparent !important;
 
 }
-
+html , body, main {
+    background: none;
+}
 
 @keyframes fade {
     from { opacity: 1.0; }
