@@ -11,7 +11,29 @@ $rootScope.title = "HexaSalon Scan";
     $scope.scan = function()
     {
 
+
 alert('ok');
+
+
+QRScanner.scan(displayContents);
+
+function displayContents(err, text){
+  if(err){
+    // an error occurred, or the scan was canceled (error code `6`)
+  } else {
+    // The scan completed, display the contents of the QR code:
+    alert(text);
+  }
+}
+
+// Make the webview transparent so the video preview is visible behind it.
+QRScanner.show();
+
+
+
+
+
+
 
 cordova.plugins.diagnostic.getCameraAuthorizationStatus(
     function(status){

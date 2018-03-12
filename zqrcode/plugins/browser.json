@@ -1,25 +1,28 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {}
-  },
-  "installed_plugins": {
-    "cordova-plugin-barcodescanner": {
-      "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
     },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+    "config_munge": {
+        "files": {}
     },
-    "cordova.plugins.diagnostic": {
-      "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+    "installed_plugins": {
+        "cordova-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+        },
+        "cordova-plugin-qrscanner": {
+            "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.tayo.fr.zqrcode"
+        }
     }
-  },
-  "dependent_plugins": {
-    "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.tayo.fr.zqrcode"
-    }
-  }
 }

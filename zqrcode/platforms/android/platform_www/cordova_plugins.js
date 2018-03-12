@@ -95,6 +95,14 @@ module.exports = [
         "merges": [
             "cordova.plugins.diagnostic.external_storage"
         ]
+    },
+    {
+        "id": "cordova-plugin-qrscanner.QRScanner",
+        "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
+        "pluginId": "cordova-plugin-qrscanner",
+        "clobbers": [
+            "QRScanner"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -103,7 +111,8 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-barcodescanner": "0.7.4",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova.plugins.diagnostic": "4.0.3"
+    "cordova.plugins.diagnostic": "4.0.3",
+    "cordova-plugin-qrscanner": "2.5.0"
 };
 // BOTTOM OF METADATA
 });
