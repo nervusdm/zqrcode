@@ -11,24 +11,34 @@ $rootScope.title = "HexaSalon Scan";
     $scope.scan = function()
     {
 
+      var done = function(err, status){
+        if(err){
+          alert(err._message);
+        } else {
+          alert('QRScanner is initialized. Status:');
+
+          QRScanner.scan(displayContents);
+          function displayContents(err, text){
+            alert('zut');
+            if(err){
+              // an error occurred, or the scan was canceled (error code `6`)
+              alert('zut erreur');
+            } else {
+              // The scan completed, display the contents of the QR code:
+              alert(text);
+            }
+          }
+
+
+          // Make the webview transparent so the video preview is visible behind it.
+          QRScanner.show();
+        }
+      };
+
+      QRScanner.prepare(done);
 
 
 
-QRScanner.scan(displayContents);
-function displayContents(err, text){
-  alert('zut');
-  if(err){
-    // an error occurred, or the scan was canceled (error code `6`)
-    alert('zut erreur');
-  } else {
-    // The scan completed, display the contents of the QR code:
-    alert(text);
-  }
-}
-
-
-// Make the webview transparent so the video preview is visible behind it.
-QRScanner.show();
 
 
 
