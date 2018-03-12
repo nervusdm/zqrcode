@@ -22,8 +22,14 @@
 
 
 
+body
+{
+  background: none transparent !important;
 
-
+}
+html , body, main,.view-content  {
+    background: none transparent !important;
+}
 
 @keyframes fade {
     from { opacity: 1.0; }
@@ -42,7 +48,10 @@
     -webkit-animation:fade 3000ms infinite;
 }
 
-main { padding-top:70px}
+main { padding-top:70px;
+  background: none transparent !important;
+
+}
 button a span { color:white !important;}
 
 .centerm { text-align: center;}

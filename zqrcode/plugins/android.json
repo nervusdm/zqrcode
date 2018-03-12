@@ -13,7 +13,7 @@
         "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.tayo.fr.zqrcode"
         },
-        "cordova-plugin-qrscanner": {
+        "cordova-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.tayo.fr.zqrcode"
         }
     },

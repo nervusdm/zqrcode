@@ -1,18 +1,12 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
-        "id": "cordova-plugin-qrscanner.QRScanner",
-        "pluginId": "cordova-plugin-qrscanner",
+        "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
+        "id": "cordova-plugin-barcodescanner.BarcodeScanner",
+        "pluginId": "cordova-plugin-barcodescanner",
         "clobbers": [
-            "QRScanner"
+            "cordova.plugins.barcodeScanner"
         ]
-    },
-    {
-        "file": "plugins/cordova-plugin-qrscanner/src/browser/plugin.min.js",
-        "id": "cordova-plugin-qrscanner.QRScannerProxy",
-        "pluginId": "cordova-plugin-qrscanner",
-        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -20,7 +14,8 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.3.3",
     "cordova.plugins.diagnostic": "4.0.3",
-    "cordova-plugin-qrscanner": "2.5.0"
+    "cordova-plugin-compat": "1.0.0",
+    "cordova-plugin-barcodescanner": "0.7.4"
 }
 // BOTTOM OF METADATA
 });
