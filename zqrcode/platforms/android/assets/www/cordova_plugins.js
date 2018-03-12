@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "id": "cordova-plugin-barcodescanner.BarcodeScanner",
-        "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
-        "pluginId": "cordova-plugin-barcodescanner",
-        "clobbers": [
-            "cordova.plugins.barcodeScanner"
-        ]
-    },
-    {
         "id": "cordova.plugins.diagnostic.Diagnostic",
         "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
         "pluginId": "cordova.plugins.diagnostic",
@@ -109,7 +101,6 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-compat": "1.0.0",
-    "cordova-plugin-barcodescanner": "0.7.4",
     "cordova-plugin-whitelist": "1.3.3",
     "cordova.plugins.diagnostic": "4.0.3",
     "cordova-plugin-qrscanner": "2.5.0"

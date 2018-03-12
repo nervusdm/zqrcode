@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-barcodescanner": {
-            "PACKAGE_NAME": "com.tayo.fr.zqrcode"
-        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.tayo.fr.zqrcode"
         },
@@ -20,9 +17,5 @@
             "PACKAGE_NAME": "com.tayo.fr.zqrcode"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.tayo.fr.zqrcode"
-        }
-    }
+    "dependent_plugins": {}
 }

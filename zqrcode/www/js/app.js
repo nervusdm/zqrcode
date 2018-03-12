@@ -33,7 +33,7 @@ QRScanner.show();
 
 
 
-
+return ;
 
 cordova.plugins.diagnostic.getCameraAuthorizationStatus(
     function(status){
