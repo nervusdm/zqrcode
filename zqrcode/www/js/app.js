@@ -20,6 +20,7 @@ QRScanner.scan(displayContents);
 function displayContents(err, text){
   if(err){
     // an error occurred, or the scan was canceled (error code `6`)
+    alert('zut erreur');
   } else {
     // The scan completed, display the contents of the QR code:
     alert(text);
@@ -32,7 +33,7 @@ QRScanner.show();
 
 
 
-
+/*
 return ;
 
 cordova.plugins.diagnostic.getCameraAuthorizationStatus(
@@ -61,7 +62,7 @@ cordova.plugins.diagnostic.getCameraAuthorizationStatus(
         externalStorage: false
     }
 );
-
+*/
 
 
     }
