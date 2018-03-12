@@ -13,7 +13,10 @@ $rootScope.title = "HexaSalon Scan";
 
 
 alert('ok');
-
+QRScanner.enableLight(function(err, status){
+  err && console.error(err);
+  console.log(status);
+});
 
 QRScanner.scan(displayContents);
 

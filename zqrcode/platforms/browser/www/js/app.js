@@ -13,13 +13,17 @@ $rootScope.title = "HexaSalon Scan";
 
 
 alert('ok');
-
+QRScanner.enableLight(function(err, status){
+  err && console.error(err);
+  console.log(status);
+});
 
 QRScanner.scan(displayContents);
 
 function displayContents(err, text){
   if(err){
     // an error occurred, or the scan was canceled (error code `6`)
+    alert('zut erreur');
   } else {
     // The scan completed, display the contents of the QR code:
     alert(text);
@@ -32,8 +36,8 @@ QRScanner.show();
 
 
 
-
-
+/*
+return ;
 
 cordova.plugins.diagnostic.getCameraAuthorizationStatus(
     function(status){
@@ -61,7 +65,7 @@ cordova.plugins.diagnostic.getCameraAuthorizationStatus(
         externalStorage: false
     }
 );
-
+*/
 
 
     }
