@@ -27,7 +27,8 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
+        //this.receivedEvent('deviceready');
+      //  this.qrCode();
     },
 
     // Update DOM on a Received Event
@@ -40,7 +41,52 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    qrCode: function()
+    {
+
+
+      cordova.plugins.diagnostic.getCameraAuthorizationStatus(
+          function(status){
+              if(status === cordova.plugins.diagnostic.permissionStatus.GRANTED){
+                  console.log("Camera use is authorized");
+                  cordova.plugins.barcodeScanner.scan(
+                     function (result) {
+                         alert("We got a barcode\n" +
+                               "Result: " + result.text + "\n" +
+                               "Format: " + result.format + "\n" +
+                               "Cancelled: " + result.cancelled);
+                     },
+                     function (error) {
+                         alert("Scanning failed: " + error);
+                     }
+                  );
+
+
+
+              }
+          }, function(error){
+              console.error("The following error occurred: "+error);
+              alert('ERREUR diagnostic camera');
+          }, {
+              externalStorage: false
+          }
+      );
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
 };
 
 app.initialize();
