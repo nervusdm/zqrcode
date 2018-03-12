@@ -27,8 +27,8 @@ body
   background: none transparent !important;
 
 }
-html , body, main {
-    background: none;
+html , body, main,.view-content  {
+    background: none transparent !important;
 }
 
 @keyframes fade {
