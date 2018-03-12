@@ -12,16 +12,11 @@ $rootScope.title = "HexaSalon Scan";
     {
 
 
-alert('ok');
-QRScanner.enableLight(function(err, status){
-  err && console.error(err);
-  console.log(status);
-alert('err light')
-});
+
 
 QRScanner.scan(displayContents);
-
 function displayContents(err, text){
+  alert('zut');
   if(err){
     // an error occurred, or the scan was canceled (error code `6`)
     alert('zut erreur');
@@ -30,6 +25,7 @@ function displayContents(err, text){
     alert(text);
   }
 }
+
 
 // Make the webview transparent so the video preview is visible behind it.
 QRScanner.show();
