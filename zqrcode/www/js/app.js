@@ -16,6 +16,7 @@ alert('ok');
 QRScanner.enableLight(function(err, status){
   err && console.error(err);
   console.log(status);
+alert('err light')
 });
 
 QRScanner.scan(displayContents);
