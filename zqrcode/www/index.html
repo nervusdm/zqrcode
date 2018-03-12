@@ -39,6 +39,7 @@
               width=device-width" />
         <title>Hello World</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-cookies.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
@@ -47,29 +48,32 @@
         <link rel="stylesheet" type="text/css" href="css/core.min.css">
 <link rel="stylesheet" type="text/css" href="css/core-colors.min.css">
 <link rel="stylesheet" type="text/css" href="css/core-icons.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
     </head>
     <body>
       <div class="app">
       <header class="header">
-          <span class="app-title">HexaSalon</span>
+          <span class="app-title">{{title}}</span>
       </header>
 
         <div ui-view="main" class="view-content">
         </div>
-        <div class="bottom-nav">
-              <button class="button">
+        <div class="bottom-nav" data-role="ripple" data-ripple-target="button">
+              <button class="button  bg-pink fg-white">
                 <a ng-href='#!/scan/'>
 
                 <span class="icon i-home"></span>
                 <span class="label">Scanner</span>
                           </a>
             </button>
-
-            <button class="button">
+            <a ng-href="#!/exposant/">
+            <button class="button  bg-pink fg-white">
                 <span class="icon i-favorite"></span>
-                <span class="label">Favorites</span>
+                <span class="label">Exposants</span>
+            </a>
             </button>
-            <button class="button">
+            <button class="button  bg-pink fg-white">
                 <span class="icon i-search"></span>
                 <span class="label">Search</span>
             </button>

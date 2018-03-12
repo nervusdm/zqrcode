@@ -1,9 +1,13 @@
-var ZabApp = angular.module('ZabApp',['ui.router']);
+var ZabApp = angular.module('ZabApp',['ui.router','ngAnimate']);
 
 
-ZabApp.controller('ScanCtrl', function($scope) {
+ZabApp.controller('ScanCtrl', function($scope,$rootScope) {
     $scope.firstName = "John";
     $scope.lastName = "Doe";
+$rootScope.title = "HexaSalon Scan";
+
+
+
     $scope.scan = function()
     {
 
@@ -42,6 +46,22 @@ cordova.plugins.diagnostic.getCameraAuthorizationStatus(
 });
 
 
+
+ZabApp.controller('ExposantCtrl', function($scope,$rootScope) {
+
+  $rootScope.title = "Nos Exposants";
+
+
+});
+
+
+
+
+
+
+
+
+
 ZabApp.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -67,7 +87,17 @@ ZabApp.config(function($stateProvider, $urlRouterProvider) {
                     }
             }
         })
-
+        .state('exposant', {
+                        url: "/exposant/",
+            views: {
+                    "main":
+                    {
+                      templateUrl: 'templates/exposant.html',
+                        hideMenus: true,
+                        controller: 'ExposantCtrl'
+                    }
+            }
+        })
 
 
         .state('home', {
