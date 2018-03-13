@@ -1,0 +1,25 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.salon.fr.zqrcode"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.salon.fr.zqrcode"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.salon.fr.zqrcode"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.salon.fr.zqrcode"
+    }
+  }
+}
